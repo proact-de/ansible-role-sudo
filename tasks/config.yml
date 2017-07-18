@@ -1,0 +1,27 @@
+---
+- name: Ensure sudo groups exist
+  group:
+    name: "{{ item }}"
+    state: present
+    system: true
+  with_items:
+    - "{{ sudo_allow_group }}"
+    - "{{ sudo_nopasswd_group }}"
+
+- name: Template main sudo config (sudoers)
+  template:
+    dest: "{{ sudo_config_root }}/sudoers"
+    group: "{{ root_group }}"
+    mode: 0440
+    owner: root
+    src: sudoers.j2
+    validate: visudo -cf %s
+
+- name: Template sudo group config (sudoers.d)
+  template:
+    dest: "{{ sudo_config_root }}/sudoers.d/10-groups"
+    group: "{{ root_group }}"
+    mode: 0440
+    owner: root
+    src: sudo_groups.j2
+    validate: visudo -cf %s

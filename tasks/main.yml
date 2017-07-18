@@ -1,0 +1,13 @@
+---
+# tasks file for teamix.sudo
+- name: Include Distro dependent vars
+  include_vars: "{{ item }}"
+  with_items:
+    - "{{ ansible_os_family }}.yml"
+    - "{{ ansible_distribution }}{{ ansible_distribution_major_version }}.yml"
+
+- name: Include install tasks
+  include: install.yml
+
+- name: Include config tasks
+  include: config.yml

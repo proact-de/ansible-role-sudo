@@ -1,0 +1,3 @@
+---
+sudo_config_root: /usr/local/etc
+root_group: wheel

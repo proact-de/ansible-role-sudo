@@ -1,0 +1,9 @@
+---
+# defaults file for teamix.sudo
+sudo_package: sudo
+sudo_config_root: /etc
+
+sudo_allow_group: sudo
+sudo_nopasswd_group: sudonopw
+
+root_group: root
