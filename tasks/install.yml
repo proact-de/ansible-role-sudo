@@ -1,5 +1,5 @@
 ---
 - name: Install sudo
   package:
-    name: "{{ sudo_package }}"
+    name: "{{ tmxsudo_package }}"
     state: present
