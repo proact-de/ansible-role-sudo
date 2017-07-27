@@ -8,6 +8,8 @@
 
 - name: Include install tasks
   include: install.yml
+  tags: [ install ]
 
 - name: Include config tasks
   include: config.yml
+  tags: [ config ]
