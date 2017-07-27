@@ -6,5 +6,5 @@
 # Allow members of group {{ tmxsudo_allow_group }} to execute any command
 %{{ tmxsudo_allow_group }} ALL=(ALL:ALL) ALL
 
-# Allow members of group {{ sudo_nopasswd_group }} to execute any command without password
+# Allow members of group {{ tmxsudo_nopasswd_group }} to execute any command without password
 %{{ tmxsudo_nopasswd_group }} ALL=(ALL:ALL) NOPASSWD:ALL
