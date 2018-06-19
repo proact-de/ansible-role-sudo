@@ -8,6 +8,20 @@
     - "{{ tmxsudo_allow_group }}"
     - "{{ tmxsudo_nopasswd_group }}"
 
+- name: Check if ubuntu user exists
+  getent:
+    database: passwd
+    key: ubuntu
+    fail_key: false
+  register: ubuntu_exists
+
+- name: Add ubuntu user to normal sudo group
+  user:
+    name: ubuntu
+    groups: sudo
+    append: yes
+  when: "ubuntu_exists.ansible_facts.getent_passwd.ubuntu != []"
+
 - name: Template main sudo config (sudoers)
   template:
     dest: "{{ tmxsudo_config_root }}/sudoers"
