@@ -28,7 +28,7 @@ Including an example of how to use your role (for instance, with variables passe
 
     - hosts: servers
       roles:
-         - { role: teamix.sudo, tmxsudo_allow_group: tmxsudo, tmxsudo_nopasswd_group: tmxnopw }
+         - { role: proactcloud.sudo, tmxsudo_allow_group: tmxsudo, tmxsudo_nopasswd_group: tmxnopw }
 
 License
 -------

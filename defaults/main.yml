@@ -1,5 +1,5 @@
 ---
-# defaults file for teamix.sudo
+# defaults file for proactcloud.sudo
 tmxsudo_package: sudo
 tmxsudo_config_root: /etc
 
