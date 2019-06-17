@@ -3,8 +3,8 @@
 # {{ ansible_managed }}
 #
 
-# Allow members of group {{ tmxsudo_allow_group }} to execute any command
-%{{ tmxsudo_allow_group }} ALL=(ALL:ALL) ALL
+# Allow members of group {{ pacsudo_allow_group }} to execute any command
+%{{ pacsudo_allow_group }} ALL=(ALL:ALL) ALL
 
-# Allow members of group {{ tmxsudo_nopasswd_group }} to execute any command without password
-%{{ tmxsudo_nopasswd_group }} ALL=(ALL:ALL) NOPASSWD:ALL
+# Allow members of group {{ pacsudo_nopasswd_group }} to execute any command without password
+%{{ pacsudo_nopasswd_group }} ALL=(ALL:ALL) NOPASSWD:ALL

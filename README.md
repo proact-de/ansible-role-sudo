@@ -8,9 +8,9 @@ None. The neccessary groups are created, if they do not exist.
 
 ## Role Variables
 
-* tmxsudo_allow_group: sudo
+* pacsudo_allow_group: sudo
   * Controls the group of users, who are allowed to use sudo *WITH* password. Default "sudo".
-* tmxsudo_nopasswd_group: sudonopw
+* pacsudo_nopasswd_group: sudonopw
   * Control the group of users, who are allowed to use sudo *WITHOUT* password. Default "sudonopw".
 
 ## Dependencies
@@ -22,7 +22,7 @@ None.
 ```yml
 - hosts: servers
   roles:
-     - { role: proactcloud.sudo, tmxsudo_allow_group: tmxsudo, tmxsudo_nopasswd_group: tmxnopw }
+     - { role: proactcloud.sudo, pacsudo_allow_group: mysudogroup, pacsudo_nopasswd_group: mynopwgroup }
 ```
 
 ## License

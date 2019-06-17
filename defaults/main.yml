@@ -1,9 +1,9 @@
 ---
 # defaults file for proactcloud.sudo
-tmxsudo_package: sudo
-tmxsudo_config_root: /etc
+pacsudo_package: sudo
+pacsudo_config_root: /etc
 
-tmxsudo_allow_group: sudo
-tmxsudo_nopasswd_group: sudonopw
+pacsudo_allow_group: sudo
+pacsudo_nopasswd_group: sudonopw
 
 root_group: root
