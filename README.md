@@ -1,4 +1,4 @@
-# Role Name
+# proactcloud.sudo
 
 Installs and configures sudo. By default sets up two groups, which will be granted sudo access: one with password and one without.
 
